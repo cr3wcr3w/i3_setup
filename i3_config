@@ -213,3 +213,7 @@ exec_always --no-startup-id feh --bg-scale /home/jk/Pictures/wallpapers/wp.png
 
 ## app launcher
 bindsym $mod+Escape exec rofi -show drun -show-icons
+
+# brightness keys
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-1
