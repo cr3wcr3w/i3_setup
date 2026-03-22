@@ -197,7 +197,7 @@ bindsym $mod+l exec "sleep 0.1 && i3lock --blur 5"
 exec xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --scale 1x1
 #exec xrandr --auto --output HDMI-1 --mode 1920x1080 --above HDMI-2
 
-exec feh --bg-fill ~/.config/i3/wallpaper.png
+## exec feh --bg-fill ~/.config/i3/wallpaper.png
 
 exec --no-startup-id dunst
 exec --no-startup-id picom
@@ -209,6 +209,7 @@ exec_always mkfifo /tmp/xobpipe && tail -f /tmp/xobpipe | xob -t 2170 & disown
 #exec ~/.i3/launch.sh
 
 ## wallpaper
+exec_always --no-startup-id xrandr --output HDMI-1 --mode 1920x1080 --rate 120 --scale 1x1
 exec_always --no-startup-id feh --bg-scale /home/jk/Pictures/wallpapers/wp.png
 
 ## app launcher
@@ -216,4 +217,4 @@ bindsym $mod+Escape exec rofi -show drun -show-icons
 
 # brightness keys
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-1
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%
